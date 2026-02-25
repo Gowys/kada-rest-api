@@ -1,0 +1,256 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Mouse Pro",
+    "description": "Ergonomic wireless mouse with adjustable DPI and silent click.",
+    "price": 25.99,
+    "stock": 120,
+    "image_url": "https://example.com/images/wireless-mouse-pro.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Mechanical Keyboard RGB",
+    "description": "Mechanical keyboard with blue switches and customizable RGB lighting.",
+    "price": 79.99,
+    "stock": 75,
+    "image_url": "https://example.com/images/mechanical-keyboard-rgb.jpg"
+  },
+  {
+    "id": 3,
+    "name": "USB-C Hub 6-in-1",
+    "description": "Multiport USB-C hub with HDMI, USB 3.0, and SD card reader.",
+    "price": 45.5,
+    "stock": 60,
+    "image_url": "https://example.com/images/usb-c-hub.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Gaming Headset X200",
+    "description": "Surround sound gaming headset with noise-cancelling microphone.",
+    "price": 59.99,
+    "stock": 40,
+    "image_url": "https://example.com/images/gaming-headset.jpg"
+  },
+  {
+    "id": 5,
+    "name": "4K Monitor 27 Inch",
+    "description": "Ultra HD 27-inch monitor with IPS panel and thin bezel design.",
+    "price": 329.99,
+    "stock": 25,
+    "image_url": "https://example.com/images/4k-monitor.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Portable SSD 1TB",
+    "description": "High-speed external SSD with 1TB storage capacity.",
+    "price": 119.99,
+    "stock": 90,
+    "image_url": "https://example.com/images/portable-ssd.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Bluetooth Speaker Mini",
+    "description": "Compact Bluetooth speaker with deep bass and 10-hour battery life.",
+    "price": 39.99,
+    "stock": 150,
+    "image_url": "https://example.com/images/bluetooth-speaker.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Smartwatch Active 2",
+    "description": "Fitness smartwatch with heart rate monitor and GPS tracking.",
+    "price": 149.99,
+    "stock": 55,
+    "image_url": "https://example.com/images/smartwatch.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Laptop Stand Aluminum",
+    "description": "Adjustable aluminum laptop stand for better ergonomics.",
+    "price": 29.99,
+    "stock": 100,
+    "image_url": "https://example.com/images/laptop-stand.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Webcam HD 1080p",
+    "description": "Full HD webcam with built-in microphone for video conferencing.",
+    "price": 49.99,
+    "stock": 85,
+    "image_url": "https://example.com/images/webcam-hd.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Wireless Charger Pad",
+    "description": "Fast wireless charging pad compatible with Qi-enabled devices.",
+    "price": 19.99,
+    "stock": 200,
+    "image_url": "https://example.com/images/wireless-charger.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Noise Cancelling Earbuds",
+    "description": "True wireless earbuds with active noise cancellation.",
+    "price": 89.99,
+    "stock": 65,
+    "image_url": "https://example.com/images/earbuds.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Smart LED Bulb",
+    "description": "WiFi-enabled LED bulb with app control and color adjustment.",
+    "price": 14.99,
+    "stock": 300,
+    "image_url": "https://example.com/images/smart-bulb.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Action Camera 4K",
+    "description": "Waterproof 4K action camera with wide-angle lens.",
+    "price": 199.99,
+    "stock": 35,
+    "image_url": "https://example.com/images/action-camera.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Power Bank 20000mAh",
+    "description": "High-capacity power bank with fast charging support.",
+    "price": 34.99,
+    "stock": 110,
+    "image_url": "https://example.com/images/power-bank.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Gaming Chair Comfort",
+    "description": "Ergonomic gaming chair with lumbar support and adjustable height.",
+    "price": 189.99,
+    "stock": 20,
+    "image_url": "https://example.com/images/gaming-chair.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Tablet 10 Inch",
+    "description": "10-inch tablet with high-resolution display and 64GB storage.",
+    "price": 229.99,
+    "stock": 45,
+    "image_url": "https://example.com/images/tablet.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Wireless Router AX3000",
+    "description": "Dual-band WiFi 6 router with high-speed connectivity.",
+    "price": 139.99,
+    "stock": 50,
+    "image_url": "https://example.com/images/router.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Fitness Tracker Band",
+    "description": "Lightweight fitness tracker with sleep and activity monitoring.",
+    "price": 49.99,
+    "stock": 130,
+    "image_url": "https://example.com/images/fitness-tracker.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Smartphone G12",
+    "description": "6.5-inch smartphone with triple camera and 128GB storage.",
+    "price": 399.99,
+    "stock": 30,
+    "image_url": "https://example.com/images/smartphone.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Desk Lamp LED",
+    "description": "Adjustable LED desk lamp with touch control and dimmable light.",
+    "price": 22.99,
+    "stock": 140,
+    "image_url": "https://example.com/images/desk-lamp.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Graphic Tablet Pro",
+    "description": "Drawing tablet with pressure-sensitive pen for designers.",
+    "price": 159.99,
+    "stock": 25,
+    "image_url": "https://example.com/images/graphic-tablet.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Smart Doorbell",
+    "description": "WiFi video doorbell with motion detection and night vision.",
+    "price": 129.99,
+    "stock": 60,
+    "image_url": "https://example.com/images/smart-doorbell.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Drone Explorer",
+    "description": "Compact drone with HD camera and 20-minute flight time.",
+    "price": 299.99,
+    "stock": 18,
+    "image_url": "https://example.com/images/drone.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Electric Kettle 1.7L",
+    "description": "Stainless steel electric kettle with auto shut-off feature.",
+    "price": 27.99,
+    "stock": 95,
+    "image_url": "https://example.com/images/electric-kettle.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Air Fryer XL",
+    "description": "Large capacity air fryer with digital temperature control.",
+    "price": 149.99,
+    "stock": 40,
+    "image_url": "https://example.com/images/air-fryer.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Coffee Maker Deluxe",
+    "description": "Programmable coffee maker with 12-cup capacity.",
+    "price": 89.99,
+    "stock": 55,
+    "image_url": "https://example.com/images/coffee-maker.jpg"
+  },
+  {
+    "id": 28,
+    "name": "Vacuum Cleaner Turbo",
+    "description": "Bagless vacuum cleaner with strong suction power.",
+    "price": 159.99,
+    "stock": 33,
+    "image_url": "https://example.com/images/vacuum-cleaner.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Water Bottle Stainless",
+    "description": "Insulated stainless steel water bottle, keeps drinks cold for 24 hours.",
+    "price": 18.99,
+    "stock": 180,
+    "image_url": "https://example.com/images/water-bottle.jpg"
+  },
+  {
+    "id": 30,
+    "name": "Backpack Travel Pro",
+    "description": "Durable travel backpack with laptop compartment and USB port.",
+    "price": 69.99,
+    "stock": 70,
+    "image_url": "https://example.com/images/backpack.jpg"
+  },
+  {
+    "description": "test new",
+    "price": 100,
+    "stock": 100,
+    "image_url": "https://test-new",
+    "id": 31,
+    "name": "test new"
+  },
+  {
+    "description": "test",
+    "price": 100,
+    "stock": 100,
+    "id": 32
+  }
+]
