@@ -23,12 +23,12 @@ router.get('/:id', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-    let { title, description, price, stock, image_url } = req.body
+    let { name, description, price, stock, image_url } = req.body
 
     price = Number(price)
     stock = Number(stock)
 
-    if (!title || !description || !price || !stock) {
+    if (!name || !description || !price || !stock) {
         new Error('All fields are required')
     }
 

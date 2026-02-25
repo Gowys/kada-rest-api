@@ -65,7 +65,6 @@ const dataModel =  {
 
         products.splice(index, 1);
 
-
         // write the data inside data.json
         await fs.writeFile(filePath, JSON.stringify(products, null, 2));
         return undefined;
