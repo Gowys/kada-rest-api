@@ -1,0 +1,137 @@
+version: '3.8'
+
+services:
+  # ============================================
+  # API SERVICE - Aplikasi Node.js kamu
+  # ============================================
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: kada-api
+    restart: unless-stopped
+    ports:
+      - "3000:3000"                    # Map port host:container
+    environment:
+      # Server Configuration
+      - NODE_ENV=production
+      - PORT=3000
+      
+      # MongoDB Connection (PAKAI MongoDB ATLAS - yang kamu punya)
+      - MONGO_URI=${MONGO_URI}
+      
+      # JWT Configuration
+      - JWT_SECRET=${JWT_SECRET}
+      
+      # Google OAuth
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+      - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}
+      - GOOGLE_CALLBACK_URL=${GOOGLE_CALLBACK_URL}
+      
+      # Email Configuration
+      - EMAIL_HOST=${EMAIL_HOST}
+      - EMAIL_PORT=${EMAIL_PORT}
+      - EMAIL_USER=${EMAIL_USER}
+      - EMAIL_PASS=${EMAIL_PASS}
+      - EMAIL_FROM=${EMAIL_FROM}
+      
+      # App URL
+      - APP_URL=${APP_URL}
+      
+      # RabbitMQ (kalau pake, kalau nggak bisa dihapus)
+      - RABBITMQ_URL=${RABBITMQ_URL:-amqp://localhost:5672}
+    
+    env_file:
+      - .env                            # Load semua variable dari .env
+    
+    volumes:
+      # Untuk logging (opsional)
+      - ./logs:/app/logs
+      
+      # Untuk development (kalau mau hot reload, tapi di production HAPUS!)
+      # - ./src:/app/src
+      # - ./app.js:/app/app.js
+    
+    networks:
+      - kada-network
+    
+    # Healthcheck
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:3000/health', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)})"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 10s
+
+  # ============================================
+  # (OPTIONAL) MongoDB Lokal - Kalau mau pake MongoDB lokal
+  # Tapi dari .env kamu pake MongoDB Atlas, jadi ini bisa DI-SKIP
+  # ============================================
+  # mongodb:
+  #   image: mongo:6
+  #   container_name: kada-mongodb
+  #   restart: always
+  #   ports:
+  #     - "27017:27017"
+  #   environment:
+  #     MONGO_INITDB_ROOT_USERNAME: admin
+  #     MONGO_INITDB_ROOT_PASSWORD: ${MONGO_LOCAL_PASSWORD:-password123}
+  #     MONGO_INITDB_DATABASE: kada_db
+  #   volumes:
+  #     - mongo-data:/data/db
+  #   networks:
+  #     - kada-network
+
+  # ============================================
+  # (OPTIONAL) Mongo Express - UI untuk lihat database
+  # Kalau pake MongoDB Atlas, fitur ini tidak berguna
+  # ============================================
+  # mongo-express:
+  #   image: mongo-express:latest
+  #   container_name: kada-mongo-express
+  #   restart: unless-stopped
+  #   ports:
+  #     - "8081:8081"
+  #   environment:
+  #     ME_CONFIG_MONGODB_ADMINUSERNAME: admin
+  #     ME_CONFIG_MONGODB_ADMINPASSWORD: ${MONGO_LOCAL_PASSWORD:-password123}
+  #     ME_CONFIG_MONGODB_SERVER: mongodb
+  #     ME_CONFIG_BASICAUTH_USERNAME: admin
+  #     ME_CONFIG_BASICAUTH_PASSWORD: admin123
+  #   depends_on:
+  #     - mongodb
+  #   networks:
+  #     - kada-network
+
+  # ============================================
+  # (OPTIONAL) RabbitMQ - Kalau pake rabbitmq.js
+  # ============================================
+  # rabbitmq:
+  #   image: rabbitmq:3-management-alpine
+  #   container_name: kada-rabbitmq
+  #   restart: unless-stopped
+  #   ports:
+  #     - "5672:5672"      # AMQP protocol
+  #     - "15672:15672"    # Management UI
+  #   environment:
+  #     RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER:-guest}
+  #     RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASS:-guest}
+  #   volumes:
+  #     - rabbitmq-data:/var/lib/rabbitmq
+  #   networks:
+  #     - kada-network
+
+# ============================================
+# VOLUMES - Untuk menyimpan data persisten
+# ============================================
+volumes:
+  # mongo-data:          # Uncomment kalau pake MongoDB lokal
+  # rabbitmq-data:       # Uncomment kalau pake RabbitMQ
+  logs:
+
+# ============================================
+# NETWORKS - Untuk komunikasi antar container
+# ============================================
+networks:
+  kada-network:
+    driver: bridge

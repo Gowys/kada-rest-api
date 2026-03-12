@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Success</title>
+    <script>
+        // Ambil token dari URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const token = urlParams.get('token');
+
+        if (token) {
+            // Simpan token di localStorage
+            localStorage.setItem('token', token);
+            
+            // Redirect ke halaman utama atau dashboard
+            window.location.href = '/dashboard.html';
+        } else {
+            document.write('<h1>Login Gagal</h1><p>Tidak ada token yang diterima.</p>');
+        }
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>
